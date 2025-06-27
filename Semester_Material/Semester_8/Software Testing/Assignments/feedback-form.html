@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+      <div class="error" id="nameError"></div>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email">
+      <div class="error" id="emailError"></div>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+      <div class="error" id="messageError"></div>
+
+      <button type="submit">Submit</button>
+      <div class="message" id="successMessage"></div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('feedbackForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const successMessage = document.getElementById('successMessage');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      let isValid = true;
+
+      nameError.textContent = '';
+      emailError.textContent = '';
+      messageError.textContent = '';
+      successMessage.textContent = '';
+
+      if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Name is required';
+        isValid = false;
+      }
+
+      if (emailInput.value.trim() === '') {
+        emailError.textContent = 'Email is required';
+        isValid = false;
+      } else if (!isValidEmail(emailInput.value.trim())) {
+        emailError.textContent = 'Enter a valid email';
+        isValid = false;
+      }
+
+      if (messageInput.value.trim() === '') {
+        messageError.textContent = 'Message is required';
+        isValid = false;
+      }
+
+      if (isValid) {
+        successMessage.textContent = 'Thank you for your feedback!';
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

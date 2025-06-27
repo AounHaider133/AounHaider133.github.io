@@ -1,0 +1,177 @@
+{
+  "id": "5ada357d-0634-4ac4-8451-ac7f5d5e801e",
+  "version": "2.0",
+  "name": "Lab_12",
+  "url": "https://www.google.com/",
+  "tests": [{
+    "id": "209d47eb-8c59-4969-8f7a-684a7cd59247",
+    "name": "TestCase_1",
+    "commands": [{
+      "id": "75090aa5-f43b-4152-bcf7-a46d9704a827",
+      "comment": "",
+      "command": "open",
+      "target": "https://login.yahoo.com/account/create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b724c6e-2842-404f-88de-4902b7196066",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x700",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1fd9fdc-47b9-43e9-8207-19b3db8ef823",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.challenge-heading",
+      "targets": [
+        ["css=.challenge-heading", "css:finder"],
+        ["xpath=//div[@id='account-attributes-challenge']/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Create a Yahoo account')]", "xpath:innerText"]
+      ],
+      "value": "Create a Yahoo account"
+    }, {
+      "id": "a2d08a6d-5440-4c19-89b2-17c459d87c44",
+      "comment": "",
+      "command": "select",
+      "target": "id=usernamereg-month",
+      "targets": [
+        ["id=usernamereg-month", "id"],
+        ["name=mm", "name"],
+        ["css=#usernamereg-month", "css:finder"],
+        ["xpath=//select[@id='usernamereg-month']", "xpath:attributes"],
+        ["xpath=//div[@id='usernamereg-birthDate']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "March"
+    }, {
+      "id": "7225fc4f-b958-4c41-b8bd-446937724f53",
+      "comment": "",
+      "command": "type",
+      "target": "id=usernamereg-firstName",
+      "targets": [
+        ["id=usernamereg-firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#usernamereg-firstName", "css:finder"],
+        ["xpath=//input[@id='usernamereg-firstName']", "xpath:attributes"],
+        ["xpath=//div[@id='usernamereg-fullname']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Aoun Haider"
+    }, {
+      "id": "61a7c05a-0d7f-4789-9694-ec633d4f719f",
+      "comment": "",
+      "command": "type",
+      "target": "id=usernamereg-userId",
+      "targets": [
+        ["id=usernamereg-userId", "id"],
+        ["name=userId", "name"],
+        ["css=#usernamereg-userId", "css:finder"],
+        ["xpath=//input[@id='usernamereg-userId']", "xpath:attributes"],
+        ["xpath=//form[@id='regform']/fieldset[2]/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/input", "xpath:position"]
+      ],
+      "value": "mraoun@yahoo.com"
+    }, {
+      "id": "fbfd39c2-e78a-46ea-a207-77cde554c993",
+      "comment": "",
+      "command": "type",
+      "target": "id=usernamereg-password",
+      "targets": [
+        ["id=usernamereg-password", "id"],
+        ["name=password", "name"],
+        ["css=#usernamereg-password", "css:finder"],
+        ["xpath=//input[@id='usernamereg-password']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='password-container']/input", "xpath:idRelative"],
+        ["xpath=//fieldset[3]/input", "xpath:position"]
+      ],
+      "value": "1@ms$223&xty"
+    }, {
+      "id": "cae2e4d6-429b-4fbd-a71b-9504080223a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=usernamereg-day",
+      "targets": [],
+      "value": "12"
+    }, {
+      "id": "f27266f9-a6fd-45ef-bf36-fb70df2bbe5b",
+      "comment": "",
+      "command": "type",
+      "target": "id=usernamereg-year",
+      "targets": [
+        ["id=usernamereg-year", "id"],
+        ["name=yyyy", "name"],
+        ["css=#usernamereg-year", "css:finder"],
+        ["xpath=//input[@id='usernamereg-year']", "xpath:attributes"],
+        ["xpath=//form[@id='regform']/fieldset[4]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2001"
+    }]
+  }, {
+    "id": "806eacc1-2199-42b8-bd4c-b7797fb393bf",
+    "name": "TestCase_2",
+    "commands": [{
+      "id": "1e007b5a-1dd8-4f33-8af9-a2a6efc13b86",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5de293c-fe2b-4f6d-9855-9715991d4a40",
+      "comment": "",
+      "command": "type",
+      "target": "css=textarea#APjFqb",
+      "targets": [],
+      "value": "Aoun"
+    }, {
+      "id": "01b0bbc6-88af-4891-92a5-579e9bfe3c33",
+      "comment": "",
+      "command": "type",
+      "target": "css=textarea.gLFyf",
+      "targets": [],
+      "value": "Aoun1"
+    }, {
+      "id": "cf5b664b-7051-460e-a0f1-e6b6772c96cb",
+      "comment": "",
+      "command": "type",
+      "target": "css=textarea[name=\"q\"]",
+      "targets": [],
+      "value": "Aoun2"
+    }, {
+      "id": "0dc8a0fb-dad5-416f-b57e-55e9cb427484",
+      "comment": "",
+      "command": "type",
+      "target": "css=textarea.gLFyf[name=\"q\"]",
+      "targets": [],
+      "value": "Aoun3"
+    }]
+  }],
+  "suites": [{
+    "id": "2671f034-f9eb-432a-bc8e-7da530b30a32",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "28fdf426-463d-4a35-8974-e45c7299bc29",
+    "name": "Task 1",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["209d47eb-8c59-4969-8f7a-684a7cd59247"]
+  }, {
+    "id": "1fd30973-ec39-47c2-9c05-926deaf76791",
+    "name": "Task 2",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["806eacc1-2199-42b8-bd4c-b7797fb393bf"]
+  }],
+  "urls": ["https://login.yahoo.com/account/create", "https://www.google.com/"],
+  "plugins": []
+}
